@@ -40,7 +40,7 @@ func binarySearch(_ arr: [Int], _ target: Int) -> Int {
     var high: Int = arr.count - 1
     // Initialize index
     // It's set to -1 in case the target isn't found
-    var index: Int = 0
+    var index: Int = -1
     // Loop
     while low <= high {
         // Get the midpoint of the current search interval
@@ -64,8 +64,6 @@ func binarySearch(_ arr: [Int], _ target: Int) -> Int {
             index = midpoint
             break
         }
-        // Otherwise, increment the index by 1 and move on
-        index += 1
     }
     // Return the index
     return index
